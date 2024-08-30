@@ -426,7 +426,7 @@ button.navbar-toggler i.flaticon-close-2:before {
 }
 .navbar-brand img {
 	max-height: 100px;
-	width: 100%;
+	width: 100px;
 	position: relative;
     z-index: 999;
 }

@@ -202,11 +202,11 @@ function createMenu() {
             const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
             // Create a column for each card
             const col = document.createElement('div');
-            col.className = 'col-md-4 mb-4';
+            col.className = 'col-md-6 mb-4';
 
             // Create the card element
             const card = document.createElement('div');
-            card.className = 'card h-100 menu-card bg-white border-0 overflow-hidden ';
+            card.className = 'h-100 border-0 overflow-hidden ';
             card.setAttribute('data-aos', randomAnimation);
             card.setAttribute('style', 'border-radius: 10px')
 
@@ -214,12 +214,12 @@ function createMenu() {
             imgBlock.className = "img-block";
 
             // Add image to the card
-            const img = document.createElement('img');
-            img.src = dish.imageLink;
-            img.className = 'card-img-top';
-            img.alt = dish.name;
-            imgBlock.append(img)
-            card.appendChild(imgBlock);
+            // const img = document.createElement('img');
+            // img.src = dish.imageLink;
+            // img.className = 'card-img-top';
+            // img.alt = dish.name;
+            // imgBlock.append(img)
+            // card.appendChild(imgBlock);
 
             // Create card body
             const cardBody = document.createElement('div');
@@ -227,15 +227,16 @@ function createMenu() {
 
             // Add name to the card
             const cardTitle = document.createElement('h5');
-            cardTitle.className = 'card-title text-center font-bold';
+            cardTitle.className = 'card-title text-left font-bold';
             cardTitle.textContent = dish.name;
+            cardTitle.setAttribute('style', 'border-bottom: 1px dashed #ddd')
             cardBody.appendChild(cardTitle);
 
             // Add description to the card
-            const cardText = document.createElement('p');
-            cardText.className = 'card-text text-center text-grey';
-            cardText.textContent = dish.description;
-            cardBody.appendChild(cardText);
+            // const cardText = document.createElement('p');
+            // cardText.className = 'card-text text-center text-grey';
+            // cardText.textContent = dish.description;
+            // cardBody.appendChild(cardText);
 
             // Add rate nd btn container
             const rateContainer = document.createElement('div');
@@ -248,12 +249,12 @@ function createMenu() {
             rateContainer.appendChild(dishRate);
 
             // Add to cart button
-            const cartButton = document.createElement('button');
-            cartButton.className = 'border-0 btn text-center px-3 ml-auto'
-            cartButton.setAttribute('style', "background-color: #4C593E; color: #fff; border-radius: 5px");
-            cartButton.textContent = "+ Add"
-            rateContainer.appendChild(cartButton);
-            cardBody.appendChild(rateContainer);
+            // const cartButton = document.createElement('button');
+            // cartButton.className = 'border-0 btn text-center px-3 ml-auto'
+            // cartButton.setAttribute('style', "background-color: #4C593E; color: #fff; border-radius: 5px");
+            // cartButton.textContent = "+ Add"
+            // rateContainer.appendChild(cartButton);
+            // cardBody.appendChild(rateContainer);
 
             // Append card body to card
             card.appendChild(cardBody);
